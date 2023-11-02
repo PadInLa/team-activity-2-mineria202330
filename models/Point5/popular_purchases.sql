@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
--- Query that returns the most bought products from both supermarkets.
+-- Query that returns only the bought products from both supermarkets.
 SELECT 
   allprod_.*,
   COALESCE(purchases.Frecuencia, 0) AS Frecuencia
@@ -21,5 +21,6 @@ LEFT JOIN
     GROUP BY producto
   ) purchases 
 ON allprod_.Codigo = purchases.producto
+WHERE purchases.Frecuencia IS NOT NULL
 ORDER BY 
   Frecuencia DESC
