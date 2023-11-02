@@ -1,0 +1,12 @@
+sources:
+  - name: supermarket
+    database: mineriadedatos202330
+    tables:
+      - name: Olimpica
+        description: "Olimpica table"
+      - name: Exito
+        description: "Exito table"
+      - name: Compras
+        description: "Compras table"
+      - name: Clientes
+        description: "Clientes table"
