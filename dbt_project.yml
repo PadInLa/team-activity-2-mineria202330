@@ -37,6 +37,6 @@ models:
   supermarket:
     # Applies to all files under models/example/
     Point4:
-      materialized: +table
+      materialized: table
     Point5:
-      materialized: +table
+      materialized: table
