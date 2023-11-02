@@ -6,12 +6,12 @@ SELECT
   COALESCE(purchases.Frecuencia, 0) AS Frecuencia
 FROM 
   (
-    SELECT * 
+    SELECT *, 'Exito' AS almacen
     FROM {{ source("supermarket", "Exito") }}
 
     UNION ALL
 
-    SELECT * 
+    SELECT *, 'Olimpica' AS almacen
     FROM {{ source("supermarket", "imputate") }}
   ) allprod_
 LEFT JOIN 
