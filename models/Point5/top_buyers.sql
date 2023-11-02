@@ -1,5 +1,6 @@
 {{ config(materialized='table') }}
 
+-- CTE that gets the top clients from Exito and Olimpica.
 WITH top_clients AS (
     -- Select top clients from Exito
     SELECT compra_.cliente AS cod_client, COUNT(compra_.cliente) AS comprasTotales, 'Exito' AS almacen
