@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 -- Query that returns the products that were not bought from both supermarkets.
-SELECT *
+SELECT *, 'Olimpica' AS almacen
 FROM {{ source("supermarket", "imputate") }} AS Olimpica
 WHERE NOT EXISTS (
   SELECT 1
@@ -11,7 +11,7 @@ WHERE NOT EXISTS (
 
 UNION ALL
 
-SELECT *
+SELECT *, 'Exito' AS almacen
 FROM {{ source("supermarket", "Exito") }} AS Exito
 WHERE NOT EXISTS (
   SELECT 1
