@@ -24,3 +24,4 @@ ON allprod_.Codigo = purchases.producto
 WHERE purchases.Frecuencia IS NOT NULL
 ORDER BY 
   Frecuencia DESC
+LIMIT 20
