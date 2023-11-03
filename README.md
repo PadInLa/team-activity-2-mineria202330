@@ -4,6 +4,8 @@
 
 For this project, we began by constructing the Point4 model, which features an SQL script designed to address missing values within our dataset. The script identifies these gaps and systematically substitutes them with the median value for each respective field. Once the table was successfully created with all missing values imputed, we advanced to tackling the requirements of Point5. Each query crafted to resolve Point5's objectives was subsequently transformed into a distinct table within BigQuery. This structured approach allowed for seamless integration and accessibility in Looker Studio, which served as the final phase of our project. In Looker Studio, we curated a dashboard that effectively displays the results, providing a comprehensive report and visual analysis of our findings.
 
+The key to the BigQuery was sent with the zip file, we decided not to upload it to the repo for safety reasons.
+
 For Point 4:
 
 - imputate.sql: Creates imputate table with the median of the prices in case of null values.
